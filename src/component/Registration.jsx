@@ -4,6 +4,7 @@ import { signUpSchema } from "../schemas";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import styles from "../css/registration.module.css";
 
 const initialValues = {
   state: "",
@@ -71,7 +72,7 @@ export const Registration = () => {
             onBlur={handleBlur}
           />
           {errors.rera && touched.rera ? (
-            <p className="form-error">{errors.rera}</p>
+            <p className={styles.errors}>{errors.rera}</p>
           ) : null}
         </div>
 
@@ -85,7 +86,7 @@ export const Registration = () => {
             todayButton={"Today"}
           />
           {errors.modified && touched.modified ? (
-            <p className="form-error">{errors.modified}</p>
+            <p className={styles.errors}>{errors.modified}</p>
           ) : null}
         </div>
 
@@ -99,7 +100,7 @@ export const Registration = () => {
             todayButton={"Today"}
           />
           {errors.modified && touched.modified ? (
-            <p className="form-error">{errors.modified}</p>
+            <p className={styles.errors}>{errors.modified}</p>
           ) : null}
         </div>
 
@@ -113,7 +114,7 @@ export const Registration = () => {
             todayButton={"Today"}
           />
           {errors.modified && touched.modified ? (
-            <p className="form-error">{errors.modified}</p>
+            <p className={styles.errors}>{errors.modified}</p>
           ) : null}
         </div>
 
@@ -127,7 +128,7 @@ export const Registration = () => {
             todayButton={"Today"}
           />
           {errors.modified && touched.modified ? (
-            <p className="form-error">{errors.modified}</p>
+            <p className={styles.errors}>{errors.modified}</p>
           ) : null}
         </div>
 
@@ -145,7 +146,7 @@ export const Registration = () => {
             onBlur={handleBlur}
           />
           {errors.filename && touched.filename ? (
-            <p className="form-error">{errors.filename}</p>
+            <p className={styles.errors}>{errors.filename}</p>
           ) : null}
         </div>
 
@@ -165,7 +166,7 @@ export const Registration = () => {
             onBlur={handleBlur}
           />
           {errors.url && touched.url ? (
-            <p className="form-error">{errors.url}</p>
+            <p className={styles.errors}>{errors.url}</p>
           ) : null}
         </div>
 
