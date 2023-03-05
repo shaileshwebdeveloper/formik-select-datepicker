@@ -24,6 +24,9 @@ const options = [
 ];
 
 export const Registration = () => {
+
+  const [users, setUsers] = useState([])
+
   const {
     values,
     errors,
@@ -38,18 +41,22 @@ export const Registration = () => {
     onSubmit: (values, action) => {
       console.log("values", values);
       console.log("errors", errors);
+      setUsers([...users, values])
       action.resetForm();
     },
   });
 
+  console.log("users", users)
+
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{display : "flex"}}>
         {/* SELECT */}
 
         <div>
           <label>Select the State</label>
           <Select
+            defaultValue={options[1]}
             options={options}
             placeholder="Select the state"
             onChange={(e) => setFieldValue("state", e.value)}
